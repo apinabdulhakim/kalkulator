@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    margin: 0;
+}
+
+.calculator {
+    width: 380px;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 2px solid #1976d2;
+}
+
+.display {
+    width: 100%;
+    height: 90px;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: none;
+    background: #ffffff;
+    color: #1976d2;
+    border-radius: 12px;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    padding: 18px;
+    font-size: 1.6em;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: 0.2s;
+    background: linear-gradient(145deg, #64b5f6, #1976d2);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(25, 118, 210, 0.5);
+}
+
+.operator { background: linear-gradient(145deg, #ff9800, #ffb74d); color: white; }
+.clear { background: linear-gradient(145deg, #e74c3c, #f06292); grid-column: span 2; color: white; }
+.delete { background: linear-gradient(145deg, #1565c0, #42a5f5); color: white; }
+.equal { background: linear-gradient(145deg, #2ecc71, #81c784); grid-column: span 2; color: white; }
+.zero { grid-column: span 2; }
+
+button:hover {
+    transform: scale(1.1);
+    background: #1976d2;
+    color: white;
+    box-shadow: 0 5px 15px rgba(25, 118, 210, 0.7);
+}
