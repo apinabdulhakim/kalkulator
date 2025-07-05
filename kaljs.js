@@ -1,3 +1,19 @@
+
+    document.addEventListener("keydown", function(event) {
+    const key = event.key;
+    if (!isNaN(key) || key === '.') {
+        appendNumber(key);
+    } else if (['+', '-', '*', '/'].includes(key)) {
+        appendOperator(key);
+    } else if (key === 'Enter') {
+        calculate();
+    } else if (key === 'Backspace') {
+        deleteOne();
+    } else if (key === 'Escape') {
+        clearDisplay();
+    }
+});
+
 function appendNumber(num) {
     document.getElementById('display').value += num;
 }
